@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link href="https://fonts.cdnfonts.com/css/zagist" rel="stylesheet">
+  <link href="zagist.css" rel="stylesheet">
                 
   <link href="https://fonts.cdnfonts.com/css/altersan-trial" rel="stylesheet">
                 
@@ -9,7 +9,7 @@
                 
   <link href="https://fonts.cdnfonts.com/css/slatew01-medium" rel="stylesheet">
                 
-  <link href="https://fonts.cdnfonts.com/css/altersan-trial" rel="stylesheet">
+  
                 
   <link href="https://fonts.cdnfonts.com/css/palette" rel="stylesheet">
 <link href="https://fonts.cdnfonts.com/css/genera-grotesk" rel="stylesheet">
@@ -151,7 +151,7 @@
 
                 .live-text,
                 .live-text-2nd{
-            background-image: url('https://media.tenor.com/40rFi6qpszcAAAAC/live-nfl-now.gif'); /* Use a GIF for the live text */
+            background-image: url('livetext.gif'); /* Use a GIF for the live text */
             background-size: cover;
             
             border-radius: 7px;
@@ -212,7 +212,8 @@
     }
 
     .team-name,
-    .team-name-2nd{
+    .team-name-2nd,
+    .team-name-up {
         font-size: 17px; /* Example: Smaller font size on smaller screens */
     }
 }
@@ -223,6 +224,9 @@
 
 .popup,
 .popup-2nd{
+  animation: none !important;
+  transition: none !important;
+
  font-family: 'Zagist', sans-serif;
                                                 
   display: none;
@@ -249,11 +253,13 @@
 }
 
 .popup-body {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 2.5;
 }
 
 .popup a {
+ 
+
   text-decoration: none;
   color: #fff;
 }
@@ -280,6 +286,56 @@
   opacity: 80%;
   font-size: 24px; /* Set the font size to your desired value */
   font-weight: bold; /* Make the text bold */
+}
+/* Reset default styles */
+body, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Style the bottom navigation */
+.bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+}
+
+/* Style individual navigation items */
+.nav-item a {
+  transition: none !important;
+animation: none !important;
+}
+.nav-item {
+  transition: none !important;
+animation: none !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 0;
+    color: #fff;
+}
+
+/* Style navigation icons */
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    transition: none !important;
+
+}
+
+/* Style navigation text */
+.nav-text {
+  font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    margin-top: 4px;
 }
 
     </style>
@@ -339,7 +395,7 @@
             <div class="team-row-up">
                 <div class="team">
                     <img class="team-logo1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJK6n4IAD3ijbeoYIw62UDfdSFXecAL8j-Ug&usqp=CAU" alt="Team Logo Left">
-                    <div class="team-name">England</div>
+                    <div class="team-name-up">England</div>
                 </div>
                 <div class="upcoming"><p>2:30 PM<br> 5 OCT 23</p></div>
                 <div class="team">
@@ -436,5 +492,15 @@ document.addEventListener('click', () => {
     
 
     
-</body>
+
+    <nav class="bottom-nav">
+        <a href="go:liveevent" class="nav-item">
+            <img src="liveicon.png" alt="Live Icon" class="nav-icon">
+            <span class="nav-text">Live</span>
+        </a>
+        <a href="#" class="nav-item">
+            <img src="channel.png" alt="Channel Icon" class="nav-icon">
+            <span class="nav-text">Channel</span>
+        </a>
+    </nav>
 </html>
