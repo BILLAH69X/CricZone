@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="zagist.css" rel="stylesheet">
+                
+  <link href="https://fonts.cdnfonts.com/css/altersan-trial" rel="stylesheet">
+                
+  <link href="https://fonts.cdnfonts.com/css/sunday-lemon" rel="stylesheet">
+                
+  <link href="https://fonts.cdnfonts.com/css/slatew01-medium" rel="stylesheet">
+                
+  
+                
+  <link href="https://fonts.cdnfonts.com/css/palette" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/genera-grotesk" rel="stylesheet">
+                                
+  <link href="https://fonts.cdnfonts.com/css/doumbar" rel="stylesheet">
+                
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Match Page</title>
+    <style>
+    .match-container-2nd{
+      display: none;
+    }
+    .match-container{
+      display: ;
+    }
+    .match-container-up{
+      display: ;
+    }
+        body {
+            background-color: #262626;
+           
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column; /* Stack containers vertically */
+            align-items: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 600px;
+            margin: 15px 0; /* Add margin between containers */
+        }
+        
+        .match-container,
+        .match-container-2nd,
+        .match-container-up{
+            background-color: rgba(204, 242, 255, 0.3);
+            border: 3px solid #66ccff;
+            border-radius: 10px;
+            padding: 15px; /* Reduced padding */
+            text-align: center;
+            position: relative;
+        }
+
+        .game-name,
+        .game-info,
+        .game-info-2nd,
+        .game-info-up{
+     font-family: 'Trebuchet MS', sans-serif;
+                                                
+            background-color: #000;
+           
+            color: white;
+            font-size: 12px;
+            padding-top: 3px;
+            padding-left: 5px;
+            padding-right: 5px;
+            border-radius: 3px;
+            position: absolute;
+            transform: translateX(-50%); /* Center horizontally */
+            left: 50%;
+        }
+
+        .game-name {
+            top: 0;
+            font-size: 10px;
+            border-radius: 0 0 5px 5px; /* Rounded at the top */
+        }
+
+        .game-info,
+        .game-info-2nd,
+        .game-info-up{
+            bottom: 0;
+          margin-bottom: 0px;
+            border-radius: 5px 5px 0 0; /* Rounded at the bottom */
+            white-space: nowrap; /* Prevent text from breaking to a new line */
+        }
+
+        .team-row,
+        .team-row-2nd,
+        .team-row-up{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+            margin-bottom: 8px;/* Reduced the margin */
+        }
+
+        .team-2nd,
+        .team{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .team-logo1,
+        .team-logo-2nd,
+        .team-logo,
+        .team-logo2{
+            width: 70px; /* Reduced the size of team logos */
+            height: 50px; /* Reduced the size of team logos */
+            border: 1px solid white;
+            border-radius: 4px;
+            margin-left: 10px; /* Adjust horizontal position */
+            margin-right: 10px; /* Adjust horizontal position */
+        }
+.team-logo {
+  border: 1px solid black;
+}
+        .team-name,
+        .team-name-2nd,
+        .team-name-up{
+        font-weight: 500;
+          margin-top: 6px;
+       font-family: 'Open Sans', sans-serif;
+       
+font-size: 15px; 
+
+                                                 color: white;
+            
+        }
+
+.upcoming {
+      font-family: 'SlateW01-Medium', sans-serif;
+                                                          
+                                                
+     /* Set your desired background color */
+    border-radius: 10px;
+    margin-top: -35px;
+    color: #fff; /* Set your desired text color */
+    
+    width: 80px; /* Adjust the width as needed */
+    height: 40px; /* Adjust the height as needed */
+  
+}
+
+                .live-text,
+                .live-text-2nd{
+            background-image: url('livetext.gif'); /* Use a GIF for the live text */
+            background-size: cover;
+            
+            border-radius: 7px;
+            color: transparent;
+            margin-top: -15px;
+            width: 70px; /* Adjust the width as needed */
+            height: 35px; /* Adjust the height as needed */
+            animation: changeTextColor 5s linear infinite;
+        }
+
+        @keyframes changeTextColor {
+            0%, 100% {
+                color: transparent;
+            }
+            50% {
+                color: white;
+            }
+        }
+
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.moveing {
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 3px solid #66ccff;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.scrolling-text {
+ font-family: 'Sunday Lemon', sans-serif;
+ color: #fff;
+                                                
+  display: inline-block;
+  animation: marquee 20s linear infinite;
+  animation-delay: -8s; /* Adjust this value to start immediately */
+}
+
+
+        /* Example media query for smaller screens */
+@media screen and (max-width: 768px) {
+    /* Adjust styles for smaller screens here */
+    .container {
+        width: 93%; /* Example: Wider container on smaller screens */
+    }
+
+    .team-logo,
+    .team-logo1,
+    .team-logo2,
+    .team-logo-2nd{
+        width: 67px; /* Example: Smaller team logos on smaller screens */
+        height: 45px;
+    }
+
+    .team-name,
+    .team-name-2nd,
+    .team-name-up {
+        font-size: 15px; /* Example: Smaller font size on smaller screens */
+    }
+}
+.match-container,
+.match-container-2nd{
+  cursor: pointer;
+}
+
+.popup,
+.popup-2nd{
+  animation: none !important;
+  transition: none !important;
+
+font-family: 'Trebuchet MS', sans-serif;
+                                                
+  display: none;
+  position: fixed;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #424242;
+  border: 1px solid #ccc;
+  padding: 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+  text-align: left;
+}
+
+.popup-header {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.popup-body {
+  font-size: 16px;
+  line-height: 2.5;
+}
+
+.popup a {
+ 
+
+  text-decoration: none;
+  color: #fff;
+}
+.popup-2nd a {
+  text-decoration: none;
+  color: #fff;
+}
+.piccontainer {
+  display: flex;
+  display: none ;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* This ensures the div covers the full viewport height */
+}
+
+.piccontainer img {
+  opacity: 70%;
+  max-width: 80%; /* Optional: Ensure the image doesn't exceed the div's width */
+}
+
+.text {
+  color: #fff;
+  opacity: 80%;
+  font-size: 24px; /* Set the font size to your desired value */
+  font-weight: bold; /* Make the text bold */
+}
+/* Reset default styles */
+body, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Style the bottom navigation */
+.bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+}
+
+/* Style individual navigation items */
+.nav-item a {
+  transition: none !important;
+animation: none !important;
+}
+.nav-item {
+  transition: none !important;
+animation: none !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 0;
+    color: #fff;
+}
+
+/* Style navigation icons */
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    transition: none !important;
+
+}
+
+/* Style navigation text */
+.nav-text {
+  font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+    </style>
+</head>
+<body>
+
+
+    <div class="container">
+        <div class="moveing">
+  <span class="scrolling-text">Thanks for downloading our app. contact fearlessly if the server don't work</span>
+</div>
+  <div class="piccontainer">
+  <img src="nomatch.png" alt="Your Image">
+  <p class="text">NO ONGOING MATCH NOW !</p>
+</div>
+    </div>
+
+    <div class="container">
+        <div class="match-container">
+    <div class="game-name">Asian Games</div>
+          
+            <div class="team-row">
+                <div class="team">
+                    <img class="team-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2YnV0skLnn_HscKhEGNg1rJjMxtuqymHomg&usqp=CAU" alt="Team Logo Left">
+                    <div class="team-name">Team A</div>
+                </div>
+                <div class="live-text"></div>
+                <div class="team">
+                    <img class="team-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2YnV0skLnn_HscKhEGNg1rJjMxtuqymHomg&usqp=CAU" alt="Team Logo Right">
+                    <div class="team-name">Team B</div>
+                </div>
+            </div>
+           
+            <div class="game-info"> Asian Games  All Cricket Live</div>
+        </div>
+       <br>
+         <div class="match-container-2nd">
+    <div class="game-name">Cricket Series</div>
+          
+            <div class="team-row-2nd">
+                <div class="team-2nd">
+                    <img class="team-logo-2nd" src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1200px-Flag_of_India.svg.png" alt="Team Logo Left">
+                    <div class="team-name-2nd">India </div>
+                </div>
+                <div class="live-text-2nd"></div>
+                <div class="team-2nd">
+                    <img class="team-logo-2nd" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8jdwNHZf-fb6EnArTRcI-xOd59GOUXGa_Mg&usqp=CAU" alt="Team Logo Right">
+                    <div class="team-name-2nd">Australia</div>
+                </div>
+            </div>
+           
+            <div class="game-info-2nd"> Australia Tour Of India 3rd ODI</div>
+        </div>
+        
+                <div class="match-container-up">
+            <div class="game-name">World Cup 2023</div>
+            <div class="team-row-up">
+                <div class="team">
+                    <img class="team-logo1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJK6n4IAD3ijbeoYIw62UDfdSFXecAL8j-Ug&usqp=CAU" alt="Team Logo Left">
+                    <div class="team-name-up">England</div>
+                </div>
+                <div class="upcoming"><p>2:30 PM<br> 5 OCT 23</p></div>
+                <div class="team">
+                    <img class="team-logo1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Flag_of_New_Zealand.svg/800px-Flag_of_New_Zealand.svg.png" alt="Team Logo Right">
+                    <div class="team-name-up">New Zealand</div>
+                </div>
+            </div>
+            <div class="game-info-up">England VS New Zealand : Match 01</div>
+        </div>
+    </div>
+    <div class="popup" id="popup">
+  <div class="popup-content">
+    <div class="popup-header">
+      Select Asian Games Server
+    </div>
+    <div class="popup-body">
+      <a href="go:asiangame1">Server 1 HD</a><br>
+      <a href="go:asiangame2">Server 2 Medium</a><br>
+      <a href="go:asiangame3">Server 3 Low</a><br>
+    </div>
+  </div>
+</div>
+
+    <div class="popup-2nd" id="popup-2nd">
+  <div class="popup-content">
+    <div class="popup-header">
+      Select Cricket Server
+    </div>
+    <div class="popup-body">
+      <a href="go:2ndlive1">Server 1 </a><br>
+      <a href="go:2ndlive2">Server 2</a><br>
+      <a href="go:2ndlive3">Server 3</a><br>
+    </div>
+  </div>
+</div>
+    <script>
+  const popups = document.querySelectorAll('.popup');
+
+function showPopup(popup) {
+  popup.style.display = 'block';
+}
+
+function hidePopups() {
+  popups.forEach((popup) => {
+    popup.style.display = 'none';
+  });
+}
+
+// Loop through and add click event listeners for the first set of divs
+document.querySelectorAll('.match-container, .game-info, .team-row, .team-name, .live-text').forEach((div) => {
+  div.addEventListener('click', (e) => {
+    e.stopPropagation();
+    hidePopups();
+    showPopup(document.getElementById('popup'));
+  });
+});
+
+document.addEventListener('click', () => {
+  hidePopups();
+});
+
+
+
+    </script>
+    
+    
+  <script>
+    const popups2nd = document.querySelectorAll('.popup-2nd');
+
+function showPopup2nd(popup) {
+  popup.style.display = 'block';
+}
+
+function hidePopups2nd() {
+  popups2nd.forEach((popup) => {
+    popup.style.display = 'none';
+  });
+}
+
+// Loop through and add click event listeners for the second set of divs
+document.querySelectorAll('.match-container-2nd, .game-info-2nd, .team-row-2nd, .team-name-2nd, .live-text-2nd').forEach((div) => {
+  div.addEventListener('click', (e) => {
+    e.stopPropagation();
+    hidePopups2nd();
+    showPopup2nd(document.getElementById('popup-2nd'));
+  });
+});
+
+document.addEventListener('click', () => {
+  hidePopups2nd();
+});
+
+  </script> 
+    
+
+    
+
+    <nav class="bottom-nav">
+        <a href="go:liveevent" class="nav-item">
+            <img src="liveicon.png" alt="Live Icon" class="nav-icon">
+            <span class="nav-text">Live</span>
+        </a>
+        <a href="#" class="nav-item">
+            <img src="channel.png" alt="Channel Icon" class="nav-icon">
+            <span class="nav-text">Channel</span>
+        </a>
+    </nav>
+</html>
