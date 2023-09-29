@@ -21,17 +21,17 @@
     <title>Live Match Page</title>
     <style>
     .match-container-2nd{
-      display: none;
+      display: ;
     }
     .match-container{
       display: ;
     }
     .match-container-up{
-      display: ;
+      display:none ;
     }
         body {
             background-color: #262626;
-           
+          
             margin: 0;
             padding: 0;
             display: flex;
@@ -47,6 +47,7 @@
         
         .match-container,
         .match-container-2nd,
+        .match-container-3rd,
         .match-container-up{
             background-color: rgba(204, 242, 255, 0.3);
             border: 3px solid #66ccff;
@@ -59,6 +60,7 @@
         .game-name,
         .game-info,
         .game-info-2nd,
+        .game-info-3rd,
         .game-info-up{
      font-family: 'Trebuchet MS', sans-serif;
                                                 
@@ -83,6 +85,7 @@
 
         .game-info,
         .game-info-2nd,
+        .game-info-3rd,
         .game-info-up{
             bottom: 0;
           margin-bottom: 0px;
@@ -92,6 +95,7 @@
 
         .team-row,
         .team-row-2nd,
+        .team-row-3rd,
         .team-row-up{
             display: flex;
             justify-content: space-between;
@@ -101,6 +105,7 @@
         }
 
         .team-2nd,
+        .team-3rd,
         .team{
             display: flex;
             flex-direction: column;
@@ -109,6 +114,7 @@
 
         .team-logo1,
         .team-logo-2nd,
+        .team-logo-3rd,
         .team-logo,
         .team-logo2{
             width: 70px; /* Reduced the size of team logos */
@@ -119,10 +125,11 @@
             margin-right: 10px; /* Adjust horizontal position */
         }
 .team-logo {
-  border: 1px solid black;
+ 
 }
         .team-name,
         .team-name-2nd,
+        .team-name-3rd,
         .team-name-up{
         font-weight: 500;
           margin-top: 6px;
@@ -149,7 +156,8 @@ font-size: 15px;
 }
 
                 .live-text,
-                .live-text-2nd{
+                .live-text-2nd,
+                .live-text-3rd{
             background-image: url('livetext.gif'); /* Use a GIF for the live text */
             background-size: cover;
             
@@ -205,24 +213,28 @@ font-size: 15px;
     .team-logo,
     .team-logo1,
     .team-logo2,
-    .team-logo-2nd{
+    .team-logo-2nd,
+    .team-logo-3rd{
         width: 67px; /* Example: Smaller team logos on smaller screens */
         height: 45px;
     }
 
     .team-name,
     .team-name-2nd,
-    .team-name-up {
+    .team-name-up,
+    .team-name-3rd {
         font-size: 15px; /* Example: Smaller font size on smaller screens */
     }
 }
 .match-container,
-.match-container-2nd{
+.match-container-2nd
+.match-container-3rd{
   cursor: pointer;
 }
 
 .popup,
-.popup-2nd{
+.popup-2nd,
+.popup-3rd {
   animation: none !important;
   transition: none !important;
 
@@ -262,7 +274,8 @@ font-family: 'Trebuchet MS', sans-serif;
   text-decoration: none;
   color: #fff;
 }
-.popup-2nd a {
+.popup-2nd a,
+.popup-3rd a {
   text-decoration: none;
   color: #fff;
 }
@@ -354,47 +367,70 @@ animation: none !important;
 
     <div class="container">
         <div class="match-container">
-    <div class="game-name">Asian Games</div>
+    <div class="game-name">World Cup</div>
           
             <div class="team-row">
                 <div class="team">
-                    <img class="team-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2YnV0skLnn_HscKhEGNg1rJjMxtuqymHomg&usqp=CAU" alt="Team Logo Left">
-                    <div class="team-name">Team A</div>
+                    <img class="team-logo" src="sa.png" alt="Team Logo Left">
+                    <div class="team-name">South Africa</div>
                 </div>
                 <div class="live-text"></div>
                 <div class="team">
-                    <img class="team-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2YnV0skLnn_HscKhEGNg1rJjMxtuqymHomg&usqp=CAU" alt="Team Logo Right">
-                    <div class="team-name">Team B</div>
+                    <img class="team-logo" src="afg.png" alt="Team Logo Right">
+                    <div class="team-name">Afghanistan</div>
                 </div>
             </div>
            
-            <div class="game-info"> Asian Games  All Cricket Live</div>
+            <div class="game-info">ICC World Cup Warm Up Match</div>
         </div>
        <br>
          <div class="match-container-2nd">
-    <div class="game-name">Cricket Series</div>
+    <div class="game-name">World Cup</div>
           
             <div class="team-row-2nd">
                 <div class="team-2nd">
-                    <img class="team-logo-2nd" src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1200px-Flag_of_India.svg.png" alt="Team Logo Left">
-                    <div class="team-name-2nd">India </div>
+                    <img class="team-logo-2nd" src="bd.png" alt="Team Logo Left">
+                    <div class="team-name-2nd">Bangladesh</div>
                 </div>
                 <div class="live-text-2nd"></div>
                 <div class="team-2nd">
-                    <img class="team-logo-2nd" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8jdwNHZf-fb6EnArTRcI-xOd59GOUXGa_Mg&usqp=CAU" alt="Team Logo Right">
-                    <div class="team-name-2nd">Australia</div>
+                    <img class="team-logo-2nd" src="sl.png" alt="Team Logo Right">
+                    <div class="team-name-2nd">Srilanka</div>
                 </div>
             </div>
            
-            <div class="game-info-2nd"> Australia Tour Of India 3rd ODI</div>
+            <div class="game-info-2nd"> ICC World Cup Warm Up Match </div>
         </div>
+        
+        <br>
+        
+                 <div class="match-container-3rd">
+    <div class="game-name">World Cup</div>
+          
+            <div class="team-row-3rd">
+                <div class="team-3rd">
+                    <img class="team-logo-3rd" src="pak.png" alt="Team Logo Left">
+                    <div class="team-name-3rd">Pakistan</div>
+                </div>
+                <div class="live-text-3rd"></div>
+                <div class="team-3rd">
+                    <img class="team-logo-3rd" src="newz.png" alt="Team Logo Right">
+                    <div class="team-name-3rd">New Zealand</div>
+                </div>
+            </div>
+           
+            <div class="game-info-3rd"> ICC World Cup Warm Up Match</div>
+        </div>
+        
+        
+        <br>
         
                 <div class="match-container-up">
             <div class="game-name">World Cup 2023</div>
             <div class="team-row-up">
                 <div class="team">
                     <img class="team-logo1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJK6n4IAD3ijbeoYIw62UDfdSFXecAL8j-Ug&usqp=CAU" alt="Team Logo Left">
-                    <div class="team-name-up">England</div>
+                    <div class="team-name-up"></div>
                 </div>
                 <div class="upcoming"><p>2:30 PM<br> 5 OCT 23</p></div>
                 <div class="team">
@@ -408,12 +444,12 @@ animation: none !important;
     <div class="popup" id="popup">
   <div class="popup-content">
     <div class="popup-header">
-      Select Asian Games Server
+      South Africa VS Afghanistan 
     </div>
     <div class="popup-body">
-      <a href="go:asiangame1">Server 1 HD</a><br>
-      <a href="go:asiangame2">Server 2 Medium</a><br>
-      <a href="go:asiangame3">Server 3 Low</a><br>
+      <a href="go:1stlive1">Server 1</a><br>
+      <a href="go:1stlive2">Server 2 </a><br>
+   
     </div>
   </div>
 </div>
@@ -421,12 +457,26 @@ animation: none !important;
     <div class="popup-2nd" id="popup-2nd">
   <div class="popup-content">
     <div class="popup-header">
-      Select Cricket Server
+      Bangladesh VS Srilanka 
     </div>
     <div class="popup-body">
       <a href="go:2ndlive1">Server 1 </a><br>
       <a href="go:2ndlive2">Server 2</a><br>
-      <a href="go:2ndlive3">Server 3</a><br>
+    
+    </div>
+  </div>
+</div>
+
+
+    <div class="popup-3rd" id="popup-3rd">
+  <div class="popup-content">
+    <div class="popup-header">
+      Pakistan VS New Zealand 
+    </div>
+    <div class="popup-body">
+      <a href="go:3rdlive1">Server 1 </a><br>
+      <a href="go:3rdlive2">Server 2</a><br>
+      
     </div>
   </div>
 </div>
@@ -489,7 +539,34 @@ document.addEventListener('click', () => {
 
   </script> 
     
+  <script>
+    const popups3rd = document.querySelectorAll('.popup-3rd');
 
+function showPopup3rd(popup) {
+  popup.style.display = 'block';
+}
+
+function hidePopups3rd() {
+  popups3rd.forEach((popup) => {
+    popup.style.display = 'none';
+  });
+}
+
+// Loop through and add click event listeners for the second set of divs
+document.querySelectorAll('.match-container-3rd, .game-info-3rd, .team-row-3rd, .team-name-3rd, .live-text-3rd').forEach((div) => {
+  div.addEventListener('click', (e) => {
+    e.stopPropagation();
+    hidePopups3rd();
+    showPopup3rd(document.getElementById('popup-3rd'));
+  });
+});
+
+document.addEventListener('click', () => {
+  hidePopups3rd();
+});
+
+  </script> 
+    
     
 
     <nav class="bottom-nav">
