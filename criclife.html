@@ -20,11 +20,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Live Match Page</title>
     <style>
+    .piccontainer {
+  display: none;
+    }
     .match-container-2nd{
-      display:none ;
+      display: ;
     }
     .match-container{
-      display:none ;
+      display: ;
     }
      .match-container-3rd{
        display: none;
@@ -38,6 +41,8 @@
             margin: 0;
             padding: 0;
             display: flex;
+           
+          
             flex-direction: column; /* Stack containers vertically */
             align-items: center;
         }
@@ -283,7 +288,7 @@ font-family: 'Trebuchet MS', sans-serif;
   color: #fff;
 }
 .piccontainer {
-  display: flex;
+  display: none;
  
   flex-direction: column;
   justify-content: center;
@@ -297,10 +302,11 @@ font-family: 'Trebuchet MS', sans-serif;
 }
 
 .text {
+ 
   color: #fff;
-  margin-top: 50px;
   opacity: 80%;
-  font-size: 22px; /* Set the font size to your desired value */
+  margin-top: 50px;
+  font-size: 20px; /* Set the font size to your desired value */
   font-weight: bold; /* Make the text bold */
 }
 /* Reset default styles */
@@ -355,6 +361,8 @@ animation: none !important;
 }
 
     </style>
+
+
 </head>
 <body>
 
@@ -365,7 +373,7 @@ animation: none !important;
 </div>
   <div class="piccontainer">
   <img src="nomatch.png" alt="Your Image">
-<center> <p class="text">LIVE EVENT START FROM 6 TH OCTOBER. STAY TUNED </p></center>
+ <center> <p class="text">NO ONGOING MATCH NOW !</p></center>
 </div>
     </div>
 
@@ -380,8 +388,8 @@ animation: none !important;
                 </div>
                 <div class="live-text"></div>
                 <div class="team">
-                    <img class="team-logo" src="afg.png" alt="Team Logo Right">
-                    <div class="team-name">Afghanistan</div>
+                    <img class="team-logo" src="newz.png" alt="Team Logo Right">
+                    <div class="team-name">New Zealand</div>
                 </div>
             </div>
            
@@ -398,8 +406,8 @@ animation: none !important;
                 </div>
                 <div class="live-text-2nd"></div>
                 <div class="team-2nd">
-                    <img class="team-logo-2nd" src="sl.png" alt="Team Logo Right">
-                    <div class="team-name-2nd">Srilanka</div>
+                    <img class="team-logo-2nd" src="eng.png" alt="Team Logo Right">
+                    <div class="team-name-2nd">England</div>
                 </div>
             </div>
            
@@ -461,13 +469,13 @@ animation: none !important;
     <div class="popup-2nd" id="popup-2nd">
   <div class="popup-content">
     <div class="popup-header">
-      Bangladesh VS Srilanka 
+      Bangladesh VS England 
     </div>
     <div class="popup-body">
       <a href="go:2ndlive1">Server 1 </a><br>
       <a href="go:2ndlive2">Server 2</a><br>
-    
-    </div>
+          <a href="go:tsports">Tsports Server</a>
+  </div>
   </div>
 </div>
 
